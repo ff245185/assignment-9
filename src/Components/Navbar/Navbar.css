@@ -1,0 +1,132 @@
+nav {
+    background-color: #ac08f8;
+    padding: 1rem 0;
+    box-shadow: #e417e480 0px 7px 29px 0px;
+}
+
+.logo-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+}
+
+.logo-sec .bars3Icon {
+    width: 25px;
+    height: 25px;
+    transition: all 1s ease;
+}
+
+.logo-sec h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+}
+
+.navbar {
+    /* display: inline; */
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+}
+
+.navbar .menu-sec {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu-sec a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 5px 1rem;
+    /* color: #000140; */
+    color: white;
+    letter-spacing: .2rem;
+    position: relative;
+    text-align: center;
+}
+
+.navbar .menu-sec a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid white;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+.navbar .menu-sec a:hover::before {
+    width: 50px;
+}
+
+.top {
+    top: -200px;
+    left: 35%;
+    position: absolute;
+}
+
+.bottom {
+    position: relative;
+    top: 0px;
+}
+
+.NavIcon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.4rem;
+    background-color: #000140;
+}
+
+.bars3Icon {
+    color: white;
+}
+
+@media (min-width: 576px) {
+    /* .navbar {
+    display: inline;
+  } */
+    .logo-sec h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        display: flex;
+        position: relative;
+    }
+    .logo-sec h2 {
+        font-size: 1.5rem;
+    }
+    .NavIcon {
+        display: none;
+    }
+    .navbar .menu-sec {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: -20px;
+        right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        /* position: relative; */
+    }
+}
+
+@media (min-width: 1200px) {}
