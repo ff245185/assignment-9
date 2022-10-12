@@ -1,21 +1,50 @@
-import logo from './logo.svg';
+
+import Main from './component/navebar/layout/Main'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import Header from './component/navebar/Header/Header'
+import Navebar from './component/navebar/Navebar'
 import './App.css';
+import Footer from './component/navebar/layout/Footer/Footer';
+import Blog from './component/navebar/Cart/Blog/Blog'
+import Topic from './component/navebar/Cart/Topic/Topic';
 
 function App() {
+
+  const router =  createBrowserRouter([
+    {
+      path:'/',
+      element:<Main></Main>,
+      children: [
+       
+        {
+          path:'navebar',
+          element:<Navebar></Navebar>
+        },
+        {
+          path:'/',
+         loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+          element:<Header></Header>
+      },
+      {
+        path:'navebar',
+        element:<Footer></Footer>
+      },
+      {
+        path:'blog',
+        element:<Blog></Blog>
+      },
+      {
+        path:'topic',
+        element:<Topic></Topic>
+      }
+      ]
+    }
+  ])
   return (
     <div className="App">
-      
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
 
+
+     <RouterProvider router={router}></RouterProvider>
     
     </div>
   );
