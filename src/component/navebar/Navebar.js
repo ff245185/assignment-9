@@ -14,7 +14,7 @@ const Navebar = () => {
      <li><Link to="/" >Home</Link></li>
       <li><Link to="/Statisticks">Statisticks</Link></li>
       <li><Link to="/Topic" >Topic</Link></li>
-      <li><a href='/Blog'>Blog</a></li>
+      <li><Link to='/Blog'>Blog</Link></li>
     </ul>
   </div>
 </div>

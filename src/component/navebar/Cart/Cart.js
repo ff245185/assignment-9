@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const Cart = ({cartin}) => {
-    console.log(cartin);
     const {logo,name,id} = cartin;
     return (
         
@@ -13,7 +12,7 @@ const Cart = ({cartin}) => {
         <div className="card-body items-center text-center">
             <h2 className="card-title font-bold text-2xl py-2">{ name ?name: 'Not found'}</h2>
             <div className="card-actions flex items-center justify-center">
-            <Link to={`quiz/${id}`}>
+            <Link to={`../quiz/${id}`}>
                     <button className="flex items-center justify-center btn btn-primary bg-blue-500 font-semibold text-lg px-5 py-2 my-5 hover:bg-pink-600 duration-300 hover:text-white rounded-2xl">Start Practice
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

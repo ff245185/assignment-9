@@ -6,6 +6,7 @@ import Footer from '../layout/Footer/Footer';
 const Header = () => {
   const cartings = useLoaderData();
   const quiz = (cartings.data)
+    
 
 
     return (
